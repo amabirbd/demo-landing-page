@@ -39,7 +39,9 @@ li {
 
 /* mobile design */
 
-
+.container {
+    width: 100%;
+}
 .hero {
     display: flex;
     flex-direction: column;
@@ -278,28 +280,25 @@ li {
 
 .contact-form {
 
-    width: 600px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
 .fullname {
-    margin: 1rem 0;
     padding: 1.5rem;
     border: 3px solid rgb(228, 224, 224);
     border-radius: 25px;
 }
 
 .email {
-    margin: 1rem 0;
     padding: 1.5rem;
     border: 3px solid rgb(228, 224, 224);
     border-radius: 25px;
 }
 
 .message {
-    margin: 1rem 0;
     padding: 1.5rem;
     border: 3px solid rgb(228, 224, 224);
     border-radius: 25px;
@@ -428,7 +427,9 @@ textarea:focus{
         margin: 0;
     }
 
-
+    .contact-form {
+        width: 600px;
+    }
 
     .pricing-price {
         font-size: 4rem;
