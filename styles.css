@@ -39,9 +39,11 @@ li {
 
 /* mobile design */
 
-.container {
+/* .container {
     width: 100%;
-}
+    margin: auto;
+} */
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -266,7 +268,7 @@ li {
     flex-direction: column;
     align-items: center;
 
-    padding: 8rem 1rem ;
+    padding: 6rem 1rem ;
     margin: 1rem;
 }
 
@@ -288,19 +290,22 @@ li {
 
 .fullname {
     padding: 1.5rem;
-    border: 3px solid rgb(228, 224, 224);
+    margin: 1rem 0;
+    border: 2px solid rgb(228, 224, 224);
     border-radius: 25px;
 }
 
 .email {
     padding: 1.5rem;
-    border: 3px solid rgb(228, 224, 224);
+    margin: 1rem 0;
+    border: 2px solid rgb(228, 224, 224);
     border-radius: 25px;
 }
 
 .message {
     padding: 1.5rem;
-    border: 3px solid rgb(228, 224, 224);
+    margin: 1rem 0;
+    border: 2px solid rgb(228, 224, 224);
     border-radius: 25px;
 }
 
