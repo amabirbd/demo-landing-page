@@ -1,0 +1,481 @@
+/* variables */
+:root {
+    --primary-color: #646FD4;
+    --primary-text: rgba(98, 100, 100, 0.841);
+    --heading-text: rgb(67, 67, 67);
+    --section-header-size: 3rem;
+    --primary-bg: #d9d9d9;
+
+    
+}
+
+/* initial */
+
+body, p, a, ul, li {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8em;
+
+    font-size: 1.2rem;
+    color: var(--primary-text);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+a {
+    color: white;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* base styles */
+
+/* fonts */
+
+/* mobile design */
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+    
+
+    text-align: center;
+
+    background: var(--primary-bg);
+}
+
+.logo {
+    color: var(--primary-color);
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 1rem;
+}
+
+.hero-heading {
+    color: var(--heading-text);
+    font-size: 4rem;
+    padding: 1rem;
+    margin: 1rem;
+    font-family: 'Roboto Flex', sans-serif;
+    letter-spacing: 2px;
+    line-height: 4rem;
+}
+
+.hero-subheading {
+    color: var(--primary-text);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.hero-button {
+    padding: 1rem;
+    margin: 1rem;
+    height: 70px;
+    width: 180px;
+    border-radius: 73px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all .3s;
+}
+
+.hero-button:hover {
+    cursor: pointer;
+    height: 80px;
+    width: 190px;
+}
+
+.hero-image {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.hero-heading-two {
+    font-size: var(--section-header-size);
+    color: var(--heading-text);
+    padding: 3rem;
+    margin: 1rem;
+}
+
+/* card */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.card {
+    padding: 2rem 1rem;
+    margin: 1rem;
+}
+
+.card-header {
+    color: var(--primary-color);
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 32px;
+    color: var(--heading-text);
+    padding: 1rem;
+}
+
+.card-text {
+    padding: 1rem;
+}
+
+.second-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+    
+
+    text-align: center;
+
+    background: var(--primary-bg);
+}
+
+/* pricing */
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+.pricing-card {
+    padding: 2rem 1rem;
+    margin: 1rem;
+}
+
+.pricing-header {
+    color: var(--primary-color);
+    letter-spacing: 3px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.pricing-price {
+    font-size: 3rem;
+    color: var(--heading-text);
+    font-weight: 300;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.pricing-text {
+    text-align: center;
+}
+
+.pricing li {
+    margin-top: 1rem;
+}
+
+.tick {
+    background: var(--primary-bg);
+    padding: 2px 6px;
+    border-radius: 50%;
+    
+}
+
+.pricing-select-button {
+    padding: 1rem;
+    margin: 1rem;
+    height: 70px;
+    width: 180px;
+    border-radius: 73px;
+    border: none;
+    background-color: #e5e9f3;
+    color: var(--primary-color);
+    transition: all .3s;
+
+}
+
+.pricing-select-button a {
+    color: var(--primary-color);
+}
+
+.pricing-select-button:hover {
+    cursor: pointer;
+    height: 80px;
+    width: 190px;
+    background-color: #bac9f0;
+}
+
+.select-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-price-two {
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 300;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.pricing-select-button-two {
+    padding: 1rem;
+    margin: 1rem;
+    height: 70px;
+    width: 180px;
+    border-radius: 73px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all .3s;
+
+}
+
+.pricing-select-button-two:hover {
+    cursor: pointer;
+    height: 80px;
+    width: 190px;
+}
+
+/* contact */
+
+/* contact form */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 8rem 1rem ;
+    margin: 1rem;
+}
+
+.contact-title {
+    font-size: var(--section-header-size);
+    color: var(--heading-text);
+    padding: 3rem;
+    margin: 1rem;
+    font-weight: 300;
+}
+
+.contact-form {
+
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.fullname {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border: 3px solid rgb(228, 224, 224);
+    border-radius: 25px;
+}
+
+.email {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border: 3px solid rgb(228, 224, 224);
+    border-radius: 25px;
+}
+
+.message {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border: 3px solid rgb(228, 224, 224);
+    border-radius: 25px;
+}
+
+input:focus{
+	border-color: var(--primary-color);
+    -webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+textarea:focus{
+	border-color: var(--primary-color);
+    -webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+
+*:focus {
+    outline: none;
+  }
+
+
+
+.submit-button {
+    padding: 1rem;
+    margin: 1rem;
+    height: 70px;
+    width: 180px;
+    border-radius: 73px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    transition: all .3s;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    height: 80px;
+    width: 190px;
+}
+
+
+.input-btn {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--primary-bg);
+    height: 340px;
+
+}
+
+
+.footer-icon {
+    color: white;
+    background-color: var(--primary-color);
+    padding: 14px 15px;
+    border-radius: 50%;
+   
+    padding: 1rem;
+    font-size: 1.5rem;
+
+    margin: 1rem;
+    transition: all .3s;
+}
+
+.footer-icon:hover {
+    padding: 18px 20px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+
+}
+
+.copyright {
+    text-align: center;
+    padding: 1rem ;
+    margin: 1rem;
+}
+
+
+/* 
+.line-seperator {
+    height: 1px;
+    width: 1px;
+} */
+
+@media screen and (min-width: 750px) {
+    .hero-split{
+        display: flex;
+        align-items: center;
+    }
+    .hero-image {
+        width: 50%;
+        padding: 1rem;
+    }
+    .hero-split-right {
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pricing {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    
+
+    .pricing-header {
+        text-align: left;
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+
+
+    .pricing-price {
+        font-size: 4rem;
+        text-align: left;
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    .pricing-price-two {
+        text-align: left;
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    .pricing-text {
+        padding: 1rem 0;
+        margin: 0;
+        text-align: left;
+    }
+
+    .select-btn {
+        display: flex;
+        justify-content: start;
+
+    }
+
+    .select-btn button {
+        margin: 2rem 0;
+        padding: 0;
+    }
+
+    .pricing-select-button {
+       justify-content: start;
+    }
+
+    .second-image-container {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    .hero-heading {
+        font-size: 7rem;
+        line-height: 7rem;
+    }
+}
