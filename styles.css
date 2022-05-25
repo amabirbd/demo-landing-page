@@ -4,7 +4,7 @@
     --primary-text: rgba(98, 100, 100, 0.841);
     --heading-text: rgb(67, 67, 67);
     --section-header-size: 3rem;
-    --primary-bg: #d9d9d9;
+    --primary-bg: #e5e9f3;
 
     
 }
@@ -57,7 +57,7 @@ li {
     background: var(--primary-bg);
 }
 
-.logo {
+.hero-logo {
     color: var(--primary-color);
     letter-spacing: 3px;
     font-weight: 400;
@@ -197,8 +197,8 @@ li {
 }
 
 .tick {
-    background: var(--primary-bg);
-    padding: 2px 6px;
+    background: #e4e9f4;
+    padding: 1px 6px;
     border-radius: 50%;
     
 }
@@ -338,6 +338,10 @@ textarea:focus{
     background-color: var(--primary-color);
     color: white;
     transition: all .3s;
+}
+
+.submit-button a {
+    font-size: 1.2rem;
 }
 
 .submit-button:hover {
@@ -480,8 +484,32 @@ textarea:focus{
 
 
 @media screen and (min-width: 1200px) {
+    .hero-logo {
+        font-size: 24px;
+    }
     .hero-heading {
         font-size: 7rem;
         line-height: 7rem;
     }
+
+    .hero-subheading {
+        font-size: 24px;
+    }
+
+    .hero-button {
+        margin: 3rem ;
+    }
+}
+
+
+.arrowRight {
+    height: 25px;
+    padding: 1px;
+    color: white;
+    
+}
+
+.fa-check {
+    color: var(--primary-color);
+    font-size: small;
 }
