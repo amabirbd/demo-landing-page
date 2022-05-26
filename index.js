@@ -65,12 +65,9 @@ console.log("hello");
 const formSubmitHandler = async (e) => {
   e.preventDefault();
   console.log("form submitted");
-  await fetch(
-    "http://localhost:8888/.netlify/functions/handleContactFormSubmit",
-    {
-      method: "GET",
-    }
-  )
+  await fetch("http://localhost:8888/.netlify/functions/test", {
+    method: "GET",
+  })
     .then((response) => response.json())
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
