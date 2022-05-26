@@ -65,7 +65,7 @@ console.log("hello");
 const formSubmitHandler = async (e) => {
   e.preventDefault();
   console.log("form submitted");
-  await fetch("http://localhost:8888/.netlify/functions/test", {
+  await fetch("http://localhost:8888/.netlify/functions/submission-created", {
     method: "GET",
   })
     .then((response) => response.json())
