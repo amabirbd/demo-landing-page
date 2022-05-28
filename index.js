@@ -62,17 +62,27 @@
 
 console.log("hello");
 
-const formSubmitHandler = async (e) => {
-  e.preventDefault();
-  console.log("form submitted");
-  await fetch("http://localhost:8888/.netlify/functions/submission-created", {
-    method: "GET",
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.error(err));
-};
+// const formSubmitHandler = async (e) => {
+//   e.preventDefault();
+//   console.log("form submitted");
+//   await fetch("http://localhost:8888/.netlify/functions/submission-created", {
+//     method: "GET",
+//   })
+//     .then((response) => response.json())
+//     .then((data) => console.log(data))
+//     .catch((err) => console.error(err));
+// };
 
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", formSubmitHandler);
+// document
+//   .getElementById("contact-form")
+//   .addEventListener("submit", formSubmitHandler);
+
+// Email.send({
+//   Host: "smtp.elasticemail.com",
+//   Username: "amabirbd@gmail.com",
+//   Password: "D0E647A12DF8A0A066F324856399EA1D042D",
+//   To: "abir4u2011@gmail.com",
+//   From: document.getElementById("email").value || "amabirbd@gmail.com",
+//   Subject: "Contact Email",
+//   Body: "And this is the body",
+// }).then((message) => alert(message));
