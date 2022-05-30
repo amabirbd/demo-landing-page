@@ -1,5 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, setDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  setDoc,
+  setLogLevel,
+} from "firebase/firestore";
 
 // require("dotenv").config();
 
@@ -35,9 +41,9 @@ const firebaseConfig = {
 };
 
 exports.handler = async (event) => {
-  const data = JSON.parse(event.body).payload;
-  const { fullname, email, message } = data.data;
-  console.log(fullname, email, message);
+  const data = JSON.parse(event.body).payload.data;
+  const { fullname, email, message } = data;
+  console.log(data);
 
   // init firebase
   initializeApp(firebaseConfig);
@@ -48,21 +54,25 @@ exports.handler = async (event) => {
   // collection ref
   const colRef = collection(db, "messages");
 
-  // get collection data
-  getDocs(colRef)
-    .then((snapshot) => {
-      // console.log(snapshot.docs)
-      let messages = [];
-      snapshot.docs.forEach((doc) => {
-        messages.push({ ...doc.data(), id: doc.id });
-      });
-      console.log(messages);
-    })
-    .catch((err) => {
-      console.log(err.message);
-    });
+  const res = await db.collection("messages").doc().set(data);
 
-  const res = await colRef.doc().set(data.data);
+  // // get collection data
+  // getDocs(colRef)
+  //   .then((snapshot) => {
+  //     // console.log(snapshot.docs)
+  //     let messages = [];
+  //     snapshot.docs.forEach((doc) => {
+  //       messages.push({ ...doc.data(), id: doc.id });
+  //     });
+  //     console.log(messages);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err.message);
+  //   });
+
+  // const res = await colRef.doc().set(data.data);
+
+  // res.then(() => console.log("success")).catch((err) => console.log(err));
 
   return {
     statusCode: 200,
