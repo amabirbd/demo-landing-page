@@ -54,20 +54,8 @@ exports.handler = async (event) => {
   // collection ref
   const colRef = collection(db, "messages");
 
-  async function setDocument(db) {
-    // [START firestore_data_set_from_map]
-    const data = {
-      name: "Los Angeles",
-      state: "CA",
-      country: "USA",
-    };
-
-    // Add a new document in collection "cities" with ID 'LA'
-    const res = await db.collection("cities").doc("LA").set(data);
-    // [END firestore_data_set_from_map]
-
-    console.log("Set: ", res);
-  }
+  // add data to message collection
+  await db.collection("messages").doc("").set(data);
 
   // // get collection data
   // getDocs(colRef)
