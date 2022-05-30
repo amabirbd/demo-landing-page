@@ -62,16 +62,10 @@ exports.handler = async (event) => {
       console.log(err.message);
     });
 
-  setDoc(colRef, {
-    name: "abir fake",
-    email: "fake@email.com",
-    message: "fake message",
-  })
-    .then(() => console.log(" data set successfully"))
-    .catch((err) => console.error(err));
+  const res = await colRef.doc().set(data.data);
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ data }),
+    body: JSON.stringify({ res }),
   };
 };
