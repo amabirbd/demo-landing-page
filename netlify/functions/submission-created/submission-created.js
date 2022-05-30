@@ -63,9 +63,9 @@ exports.handler = async (event) => {
     });
 
   setDoc(colRef, {
-    name: fullname,
-    email: email,
-    message: message,
+    name: "abir fake",
+    email: "fake@email.com",
+    message: "fake message",
   })
     .then(() => console.log(" data set successfully"))
     .catch((err) => console.error(err));
