@@ -62,11 +62,9 @@ exports.handler = async (event) => {
       console.log(err.message);
     });
 
-  addDoc(colRef, {
-    name: fullname,
-    email: email,
-    message: message,
-  });
+  addDoc(colRef, data.data)
+    .then(() => console.log(" data set successfully"))
+    .catch((err) => console.error(err));
 
   return {
     statusCode: 200,
