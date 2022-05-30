@@ -62,26 +62,11 @@ exports.handler = async (event) => {
       console.log(err.message);
     });
 
-  // addDoc(colRef, {
-  //   name: fullname,
-  //   email: email,
-  //   message: message,
-  // });
-
-  // // add contact message
-  // const addContactMessageForm = document.querySelector(".contact-form");
-
-  // console.log(addContactMessageForm);
-
-  // addContactMessageForm.addEventListener("submit", (e) => {
-  //   e.preventDefault();
-
-  //   addDoc(colRef, {
-  //     name: fullname,
-  //     email: email,
-  //     message: message,
-  //   });
-  // });
+  addDoc(colRef, {
+    name: fullname,
+    email: email,
+    message: message,
+  });
 
   return {
     statusCode: 200,
