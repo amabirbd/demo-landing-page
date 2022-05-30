@@ -67,34 +67,6 @@ exports.handler = async (event) => {
       console.log(err);
     });
 
-  // const docRef = await addDoc(colRef, data);
-  // console.log("the new doc is: " + docRef.email);
-
-  // // add data to message collection
-  // const res = await db.collection("messages").doc("").set(data);
-
-  // res
-  //   .then(() => console.log("firebase success"))
-  //   .catch((err) => console.error(err));
-
-  // // get collection data
-  // getDocs(colRef)
-  //   .then((snapshot) => {
-  //     // console.log(snapshot.docs)
-  //     let messages = [];
-  //     snapshot.docs.forEach((doc) => {
-  //       messages.push({ ...doc.data(), id: doc.id });
-  //     });
-  //     console.log(messages);
-  //   })
-  //   .catch((err) => {
-  //     console.log(err.message);
-  //   });
-
-  // const res = await colRef.doc().set(data.data);
-
-  // res.then(() => console.log("success")).catch((err) => console.log(err));
-
   return {
     statusCode: 200,
     body: JSON.stringify({ res }),
