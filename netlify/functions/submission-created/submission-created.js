@@ -44,7 +44,7 @@ const firebaseConfig = {
 exports.handler = async (event) => {
   const data = JSON.parse(event.body).payload.data;
   const { fullname, email, message } = data;
-  console.log(data);
+  console.log(fullname, email, message);
 
   // init firebase
   initializeApp(firebaseConfig);
