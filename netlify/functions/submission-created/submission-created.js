@@ -69,6 +69,6 @@ exports.handler = async (event) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ res }),
+    body: JSON.stringify({ status: "ok" }),
   };
 };
