@@ -62,21 +62,21 @@ exports.handler = async (event) => {
       console.log(err.message);
     });
 
-  // // add contact message
-  // const addContactMessageForm = document.querySelector(".contact-form");
+  // add contact message
+  const addContactMessageForm = document.querySelector(".contact-form");
 
-  // console.log(addContactMessageForm);
+  console.log(addContactMessageForm);
 
-  // addContactMessageForm.addEventListener("submit", (e) => {
-  //   e.preventDefault();
-  //   console.log(addContactMessageForm);
+  addContactMessageForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log(addContactMessageForm);
 
-  //   addDoc(colRef, {
-  //     name: addContactMessageForm.fullname.value,
-  //     email: addContactMessageForm.email.value,
-  //     message: addContactMessageForm.message.value,
-  //   });
-  // });
+    addDoc(colRef, {
+      name: addContactMessageForm.fullname.value,
+      email: addContactMessageForm.email.value,
+      message: addContactMessageForm.message.value,
+    });
+  });
 
   return {
     statusCode: 200,
