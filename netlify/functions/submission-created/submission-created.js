@@ -5,6 +5,7 @@ import {
   getDocs,
   setDoc,
   setLogLevel,
+  addDoc,
 } from "firebase/firestore";
 
 // require("dotenv").config();
@@ -54,12 +55,15 @@ exports.handler = async (event) => {
   // collection ref
   const colRef = collection(db, "messages");
 
-  // add data to message collection
-  const res = await db.collection("messages").doc("").set(data);
+  const docRef = await addDoc(colRef, data);
+  console.log("the new doc is: " + docRef.email);
 
-  res
-    .then(() => console.log("firebase success"))
-    .catch((err) => console.error(err));
+  // // add data to message collection
+  // const res = await db.collection("messages").doc("").set(data);
+
+  // res
+  //   .then(() => console.log("firebase success"))
+  //   .catch((err) => console.error(err));
 
   // // get collection data
   // getDocs(colRef)
