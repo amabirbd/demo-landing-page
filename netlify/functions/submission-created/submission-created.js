@@ -23,21 +23,21 @@ const FIREBASE_MESSAGING_SENDER_ID = process.env.FIREBASE_MESSAGING_SENDER_ID;
 const FIREBASE_APP_ID = process.env.FIREBASE_APP_ID;
 const FIREBASE_MEASUREMENT_ID = process.env.FIREBASE_MEASUREMENT_ID;
 
+const firebaseConfig = {
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_AUTH_DOMAIN,
+  databaseURL: FIREBASE_DATABASE_URL,
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
+  appId: FIREBASE_APP_ID,
+  measurementId: FIREBASE_MEASUREMENT_ID,
+};
+
 exports.handler = async (event) => {
   const data = JSON.parse(event.body).payload;
   const { fullname, email, message } = data.data;
   console.log(fullname, email, message);
-
-  const firebaseConfig = {
-    apiKey: FIREBASE_API_KEY,
-    authDomain: FIREBASE_AUTH_DOMAIN,
-    databaseURL: FIREBASE_DATABASE_URL,
-    projectId: FIREBASE_PROJECT_ID,
-    storageBucket: FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: FIREBASE_MESSAGING_SENDER_ID,
-    appId: FIREBASE_APP_ID,
-    measurementId: FIREBASE_MEASUREMENT_ID,
-  };
 
   // init firebase
   initializeApp(firebaseConfig);
@@ -62,7 +62,11 @@ exports.handler = async (event) => {
       console.log(err.message);
     });
 
-  setDoc(colRef, data.data)
+  setDoc(colRef, {
+    name: fullname,
+    email: email,
+    message: message,
+  })
     .then(() => console.log(" data set successfully"))
     .catch((err) => console.error(err));
 
