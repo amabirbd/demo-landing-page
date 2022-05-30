@@ -18,6 +18,7 @@
   "homepage": "https://github.com/amabirbd/demo-landing-page#readme",
   "dependencies": {
     "dotenv": "^16.0.1",
+    "firebase": "^9.8.2",
     "mailgun-js": "^0.22.0",
     "netlify-cli": "^10.3.3",
     "node-fetch": "^2.6.7"
