@@ -25,8 +25,8 @@ const FIREBASE_MEASUREMENT_ID = process.env.FIREBASE_MEASUREMENT_ID;
 
 exports.handler = async (event) => {
   const data = JSON.parse(event.body).payload;
-  const { name, email, message } = data.data;
-  console.log(name, email, message);
+  const { fullname, email, message } = data.data;
+  console.log(fullname, email, message);
 
   const firebaseConfig = {
     apiKey: FIREBASE_API_KEY,
@@ -62,21 +62,26 @@ exports.handler = async (event) => {
       console.log(err.message);
     });
 
-  // add contact message
-  const addContactMessageForm = document.querySelector(".contact-form");
-
-  console.log(addContactMessageForm);
-
-  addContactMessageForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    console.log(addContactMessageForm);
-
-    addDoc(colRef, {
-      name: addContactMessageForm.fullname.value,
-      email: addContactMessageForm.email.value,
-      message: addContactMessageForm.message.value,
-    });
+  addDoc(colRef, {
+    name: fullname,
+    email: email,
+    message: message,
   });
+
+  // // add contact message
+  // const addContactMessageForm = document.querySelector(".contact-form");
+
+  // console.log(addContactMessageForm);
+
+  // addContactMessageForm.addEventListener("submit", (e) => {
+  //   e.preventDefault();
+
+  //   addDoc(colRef, {
+  //     name: fullname,
+  //     email: email,
+  //     message: message,
+  //   });
+  // });
 
   return {
     statusCode: 200,
