@@ -86,3 +86,41 @@ console.log("hello");
 //   Subject: "Contact Email",
 //   Body: "And this is the body",
 // }).then((message) => alert(message));
+
+// import { firestore } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js";
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+// import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+// const {
+//   FIREBASE_API_KEY,
+//   FIREBASE_AUTH_DOMAIN,
+//   FIREBASE_DATABASE_URL,
+//   FIREBASE_PROJECT_ID,
+//   FIREBASE_STORAGE_BUCKET,
+//   FIREBASE_MESSAGING_SENDER_ID,
+//   FIREBASE_APP_ID,
+//   FIREBASE_MEASUREMENT_ID,
+// } = process.env;
+
+// console.log(FIREBASE_AUTH_DOMAIN);
+
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCRG3egud11OW0TNX917LpM2j2fAEfThIw",
+//   authDomain: "software-sheba-emails.firebaseapp.com",
+//   databaseURL:
+//     "https://software-sheba-emails-default-rtdb.asia-southeast1.firebasedatabase.app",
+//   projectId: "software-sheba-emails",
+//   storageBucket: "software-sheba-emails.appspot.com",
+//   messagingSenderId: "157322159291",
+//   appId: "1:157322159291:web:89ae77bed4ddd052d9b59e",
+//   measurementId: "G-EM3M43GQDD",
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);

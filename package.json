@@ -1,5 +1,5 @@
 {
-  "name": "demo",
+  "name": "demo-landing",
   "version": "1.0.0",
   "description": "Link to [live site](https://curious-caramel-fb772c.netlify.app/)",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/amabirbd/demo-landing-page.git"
   },
-  "author": "",
+  "author": "al muntasir abir",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/amabirbd/demo-landing-page/issues"
@@ -18,6 +18,8 @@
   "homepage": "https://github.com/amabirbd/demo-landing-page#readme",
   "dependencies": {
     "dotenv": "^16.0.1",
-    "mailgun-js": "^0.22.0"
+    "mailgun-js": "^0.22.0",
+    "netlify-cli": "^10.3.3",
+    "node-fetch": "^2.6.7"
   }
 }
