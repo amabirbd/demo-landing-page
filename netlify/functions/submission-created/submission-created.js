@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+import { getFirestore, collection, getDocs, setDoc } from "firebase/firestore";
 
 // require("dotenv").config();
 
@@ -62,7 +62,7 @@ exports.handler = async (event) => {
       console.log(err.message);
     });
 
-  addDoc(colRef, data.data)
+  setDoc(colRef, data.data)
     .then(() => console.log(" data set successfully"))
     .catch((err) => console.error(err));
 
