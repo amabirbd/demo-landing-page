@@ -55,7 +55,11 @@ exports.handler = async (event) => {
   const colRef = collection(db, "messages");
 
   // add data to message collection
-  await db.collection("messages").doc("").set(data);
+  const res = await db.collection("messages").doc("").set(data);
+
+  res
+    .then(() => console.log("firebase success"))
+    .catch((err) => console.error(err));
 
   // // get collection data
   // getDocs(colRef)
