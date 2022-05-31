@@ -41,22 +41,22 @@ import {
 //   measurementId: FIREBASE_MEASUREMENT_ID,
 // };
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCRG3egud11OW0TNX917LpM2j2fAEfThIw",
-  authDomain: "software-sheba-emails.firebaseapp.com",
-  databaseURL:
-    "https://software-sheba-emails-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "software-sheba-emails",
-  storageBucket: "software-sheba-emails.appspot.com",
-  messagingSenderId: "157322159291",
-  appId: "1:157322159291:web:89ae77bed4ddd052d9b59e",
-  measurementId: "G-EM3M43GQDD",
-};
-
 exports.handler = async (event) => {
   const data = JSON.parse(event.body).payload.data;
   const { fullname, email, message } = data;
   console.log(fullname, email, message);
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCRG3egud11OW0TNX917LpM2j2fAEfThIw",
+    authDomain: "software-sheba-emails.firebaseapp.com",
+    databaseURL:
+      "https://software-sheba-emails-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "software-sheba-emails",
+    storageBucket: "software-sheba-emails.appspot.com",
+    messagingSenderId: "157322159291",
+    appId: "1:157322159291:web:89ae77bed4ddd052d9b59e",
+    measurementId: "G-EM3M43GQDD",
+  };
 
   // init firebase
   initializeApp(firebaseConfig);
