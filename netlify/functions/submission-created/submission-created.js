@@ -8,7 +8,7 @@ import {
   addDoc,
 } from "firebase/firestore";
 
-require("dotenv").config();
+// require("dotenv").config();
 
 // const {
 //   FIREBASE_API_KEY,
