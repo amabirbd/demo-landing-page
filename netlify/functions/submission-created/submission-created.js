@@ -60,8 +60,8 @@ exports.handler = async (event) => {
     email: email,
     message: message,
   })
-    .then((data) => {
-      console.log("success firebase", data);
+    .then(() => {
+      console.log("success firebase");
     })
     .catch((err) => {
       console.log(err);
