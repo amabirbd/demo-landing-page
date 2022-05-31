@@ -1,3 +1,13 @@
+// import { initializeApp } from "firebase/app";
+// import {
+//   getFirestore,
+//   collection,
+//   getDocs,
+//   setDoc,
+//   setLogLevel,
+//   addDoc,
+// } from "firebase/firestore";
+
 // const firebaseConfig = {
 //   apiKey: "AIzaSyCRG3egud11OW0TNX917LpM2j2fAEfThIw",
 //   authDomain: "software-sheba-emails.firebaseapp.com",
@@ -14,7 +24,7 @@
 
 // var contactFormDB = firebase.database().ref("contactForm");
 
-// document.getElementById("contact").addEventListener("submit", submitForm);
+// document.getElementById("contact-form").addEventListener("submit", submitForm);
 
 // function submitForm(e) {
 //   e.preventDefault();
@@ -59,8 +69,6 @@
 //   });
 //   console.log(messages);
 // });
-
-console.log("hello");
 
 // const formSubmitHandler = async (e) => {
 //   e.preventDefault();

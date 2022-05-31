@@ -1,5 +1,6 @@
 {
   "name": "demo-landing",
+  "type": "module",
   "version": "1.0.0",
   "description": "Link to [live site](https://curious-caramel-fb772c.netlify.app/)",
   "main": "index.js",
@@ -23,4 +24,5 @@
     "netlify-cli": "^10.3.3",
     "node-fetch": "^2.6.7"
   }
+  
 }
