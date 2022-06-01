@@ -70,20 +70,20 @@
 //   console.log(messages);
 // });
 
-// const formSubmitHandler = async (e) => {
-//   e.preventDefault();
-//   console.log("form submitted");
-//   await fetch("http://localhost:8888/.netlify/functions/submission-created", {
-//     method: "GET",
-//   })
-//     .then((response) => response.json())
-//     .then((data) => console.log(data))
-//     .catch((err) => console.error(err));
-// };
+const formSubmitHandler = async (e) => {
+  e.preventDefault();
+  console.log("form submitted");
+  await fetch("http://localhost:8888/.netlify/functions/test", {
+    method: "GET",
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.error(err));
+};
 
-// document
-//   .getElementById("contact-form")
-//   .addEventListener("submit", formSubmitHandler);
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", formSubmitHandler);
 
 // Email.send({
 //   Host: "smtp.elasticemail.com",

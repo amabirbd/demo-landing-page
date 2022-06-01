@@ -1,12 +1,12 @@
-import { initializeApp } from "firebase/app";
-import {
-  getFirestore,
-  collection,
-  getDocs,
-  setDoc,
-  setLogLevel,
-  addDoc,
-} from "firebase/firestore";
+// import { initializeApp } from "firebase/app";
+// import {
+//   getFirestore,
+//   collection,
+//   getDocs,
+//   setDoc,
+//   setLogLevel,
+//   addDoc,
+// } from "firebase/firestore";
 
 // require("dotenv").config();
 
@@ -46,41 +46,41 @@ exports.handler = async (event) => {
   const { fullname, email, message } = data;
   console.log(fullname, email, message);
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyCRG3egud11OW0TNX917LpM2j2fAEfThIw",
-    authDomain: "software-sheba-emails.firebaseapp.com",
-    databaseURL:
-      "https://software-sheba-emails-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "software-sheba-emails",
-    storageBucket: "software-sheba-emails.appspot.com",
-    messagingSenderId: "157322159291",
-    appId: "1:157322159291:web:89ae77bed4ddd052d9b59e",
-    measurementId: "G-EM3M43GQDD",
-  };
+  // const firebaseConfig = {
+  //   apiKey: "AIzaSyCRG3egud11OW0TNX917LpM2j2fAEfThIw",
+  //   authDomain: "software-sheba-emails.firebaseapp.com",
+  //   databaseURL:
+  //     "https://software-sheba-emails-default-rtdb.asia-southeast1.firebasedatabase.app",
+  //   projectId: "software-sheba-emails",
+  //   storageBucket: "software-sheba-emails.appspot.com",
+  //   messagingSenderId: "157322159291",
+  //   appId: "1:157322159291:web:89ae77bed4ddd052d9b59e",
+  //   measurementId: "G-EM3M43GQDD",
+  // };
 
-  // init firebase
-  initializeApp(firebaseConfig);
+  // // init firebase
+  // initializeApp(firebaseConfig);
 
-  // init services
-  const db = getFirestore();
+  // // init services
+  // const db = getFirestore();
 
-  // collection ref
-  const colRef = collection(db, "messages");
+  // // collection ref
+  // const colRef = collection(db, "messages");
 
-  addDoc(colRef, {
-    name: fullname,
-    email: email,
-    message: message,
-  })
-    .then(() => {
-      console.log("success firebase");
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  // addDoc(colRef, {
+  //   name: fullname,
+  //   email: email,
+  //   message: message,
+  // })
+  //   .then(() => {
+  //     console.log("success firebase");
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ status: "ok" }),
-  };
+  // return {
+  //   statusCode: 200,
+  //   body: JSON.stringify({ status: "ok" }),
+  // };
 };
