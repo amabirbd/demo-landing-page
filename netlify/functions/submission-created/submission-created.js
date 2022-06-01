@@ -34,6 +34,8 @@ exports.handler = async (event) => {
   const data = JSON.parse(event.body).payload.data;
   const { fullname, email, message } = data;
 
+  console.log(fullname, email, message);
+
   const firebaseConfig = {
     apiKey: FIREBASE_API_KEY,
     authDomain: FIREBASE_AUTH_DOMAIN,
@@ -54,7 +56,7 @@ exports.handler = async (event) => {
   // collection ref
   const colRef = collection(db, "messages");
 
-  addDoc(colRef, {
+  await addDoc(colRef, {
     name: fullname,
     email: email,
     message: message,
