@@ -33,7 +33,6 @@ const FIREBASE_MEASUREMENT_ID = process.env.FIREBASE_MEASUREMENT_ID;
 exports.handler = async (event) => {
   const data = JSON.parse(event.body).payload.data;
   const { fullname, email, message } = data;
-  console.log(fullname, email, message);
 
   const firebaseConfig = {
     apiKey: FIREBASE_API_KEY,
