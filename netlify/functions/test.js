@@ -4,6 +4,9 @@ exports.handler = async function (event, context) {
 
   return {
     statusCode: 200,
+    header: {
+      "Access-Control-Allow-Origin": "*",
+    },
     body: JSON.stringify({ message: "Hello from test" }),
   };
 };
