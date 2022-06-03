@@ -98,13 +98,12 @@ li {
     border: none;
     background-color: var(--primary-color);
     color: white;
-    transition: all .3s;
+    transition: transform .3s;
 }
 
 .hero-button:hover {
     cursor: pointer;
-    height: 80px;
-    width: 190px;
+    transform: scale(1.2, 1.2);
 }
 
 .hero-image {
@@ -298,24 +297,27 @@ li {
 }
 
 .fullname {
-    padding: 1.5rem;
-    margin: 1rem 0;
+    padding: 1rem;
+    margin: 1rem 0px;
     border: 2px solid rgb(228, 224, 224);
-    border-radius: 25px;
+    border-radius: 10px;
+    font-size: 1.3rem;
 }
 
 .email {
-    padding: 1.5rem;
-    margin: 1rem 0;
+    padding: 1rem;
+    margin: 1rem 0px;
     border: 2px solid rgb(228, 224, 224);
-    border-radius: 25px;
+    border-radius: 10px;
+    font-size: 1.3rem;
 }
 
 .message {
-    padding: 1.5rem;
-    margin: 1rem 0;
+    padding: 1rem;
+    margin: 1rem 0px;
     border: 2px solid rgb(228, 224, 224);
-    border-radius: 25px;
+    border-radius: 10px;
+    font-size: 1.3rem;
 }
 
 input:focus{
@@ -346,7 +348,7 @@ textarea:focus{
     border: none;
     background-color: var(--primary-color);
     color: white;
-    transition: all .3s;
+    transition: transform .3s;
 }
 
 .submit-button a {
@@ -355,8 +357,7 @@ textarea:focus{
 
 .submit-button:hover {
     cursor: pointer;
-    height: 80px;
-    width: 190px;
+    transform: scale(1.2, 1.2);
 }
 
 
@@ -389,7 +390,7 @@ textarea:focus{
 }
 
 .footer-icon:hover {
-    padding: 18px 20px;
+    transform: scale(1.2, 1.2);
 }
 
 .footer-icons {
