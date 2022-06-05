@@ -90,13 +90,13 @@ exports.handler = async (event) => {
     from: "amabirbd@gmail.com", // sender address
     to: "admin@softwaresheba.com", // list of receivers
     subject: "New Contact Form Submission", // Subject line
-    text: `
-      A new message was received,
+    html: `
+      <div>A new message was received,</div>
+      <div>Sender: ${fullname}</div>
+      <div>Sender Email: ${email}</div>
+      <div>Message: ${message}</div>
       
-      Sender ${fullname}
-      Sender Email: ${email}
-      Message: ${message}
-    `, // plain text body
+    `,
   });
 
   console.log("Message sent: %s", info.messageId);
