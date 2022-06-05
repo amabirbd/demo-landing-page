@@ -91,10 +91,10 @@ exports.handler = async (event) => {
     to: "admin@softwaresheba.com", // list of receivers
     subject: "New Contact Form Submission", // Subject line
     html: `
-      <div>A new message was received,</div>
-      <div>Sender: ${fullname}</div>
-      <div>Sender Email: ${email}</div>
-      <div>Message: ${message}</div>
+      <div style="font-size: 1.4rem">A new message was received,</div>
+      <div style="font-weight: bold">Sender: ${fullname}</div>
+      <div style="font-weight: bold">Sender Email: ${email}</div>
+      <div style="font-weight: bold">Message: ${message}</div>
       
     `,
   });
