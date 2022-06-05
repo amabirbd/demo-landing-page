@@ -8,6 +8,8 @@ import {
   addDoc,
 } from "firebase/firestore";
 
+const nodemailer = require("nodemailer");
+
 // require("dotenv").config();
 
 // const {
@@ -56,17 +58,48 @@ exports.handler = async (event) => {
   // collection ref
   const colRef = collection(db, "messages");
 
+  // add message to the firestore database
   await addDoc(colRef, {
     name: fullname,
     email: email,
     message: message,
   })
-    .then(() => {
+    .then((data) => {
       console.log("success firebase");
     })
     .catch((err) => {
       console.log(err);
     });
+
+  // send email using nodemailer
+  let testAccount = await nodemailer.createTestAccount();
+
+  // create reusable transporter object using the default SMTP transport
+  let transporter = nodemailer.createTransport({
+    host: "smtp.ethereal.email",
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: testAccount.user, // generated ethereal user
+      pass: testAccount.pass, // generated ethereal password
+    },
+  });
+
+  // send mail with defined transport object
+  let info = await transporter.sendMail({
+    from: "amabirbd@gmail.com", // sender address
+    to: "abir4u2011@gmail.com", // list of receivers
+    subject: "New Contact Form Submission", // Subject line
+    text: `
+      A new message was received,
+      
+      Sender ${fullname}
+      Sender Email: ${email}
+      Message: ${message}
+    `, // plain text body
+  });
+
+  console.log("Message sent: %s", info.messageId);
 
   return {
     statusCode: 200,
