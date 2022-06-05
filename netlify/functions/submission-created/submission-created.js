@@ -88,7 +88,7 @@ exports.handler = async (event) => {
   // send mail with defined transport object
   let info = await transporter.sendMail({
     from: "amabirbd@gmail.com", // sender address
-    to: "abir4u2011@gmail.com", // list of receivers
+    to: "admin@softwaresheba.com", // list of receivers
     subject: "New Contact Form Submission", // Subject line
     text: `
       A new message was received,
